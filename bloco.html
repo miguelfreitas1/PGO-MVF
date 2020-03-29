@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>  de Notas</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100.200.300.400.500.600.700.800.900|Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<header>
+<a href="site.html" class="header-brand">+ VIDA</a>
+<nav>
+  <ul>
+        <li><a  id="cores" href="oque.html">O que se passa?</a></li>
+        <li><a id="cores" href="testemunhos.html">Testemunhos</a></li>
+        <li><a id="cores" href="ajuda.html">Ajuda</a></li>
+</ul>
+</nav>
+</header>
+  <br><br><br><br>
+
+
+  <h1 class="ml6">
+  <span class="text-wrapper">
+    <span class="letters">Agradece tudo aqui</span>
+  </span>
+</h1>
+<br><br><br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<div class="setup">
+  <select class="look" onchange="changeFont(this)">
+  <option value="Arial">Arial</option>
+  <option value="Helvetica">Helvetica</option>
+  <option value="Catamaran">Catamaran</option>
+  </select>
+  <select class="size">
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>20</option>
+    <optio>22</option>
+    <option>24</option>
+  </select>
+  <input id="bold" type="button" value="Bold" class="upper">
+  <input id="italic" type="button" value="Italic" class="upper">
+  <input id="underline" type="button" value="U" class="upper">
+  <br></br>
+  <textarea placeholder="Escreve tudo aqui" id="content" rows="20" cols="100"></textarea>
+  <script type="text/javascript">
+  // Wrap every letter in a span
+  var textWrapper = document.querySelector('.ml6 .letters');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  anime.timeline({loop: true})
+    .add({
+      targets: '.ml6 .letter',
+      translateY: ["1.1em", 0],
+      translateZ: 0,
+      duration: 750,
+      delay: (el, i) => 50 * i
+    }).add({
+      targets: '.ml6',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  </script>
+
+  </body>
+  <footer class="footer-testemunhos">
+    <ul>
+      <li><a id="links-footer" href="ajuda.html">CONTACTOS</a></li>
+      <li><a id="links-footer" href="ajuda.html">AJUDA</a></li>
+    </ul>
+  </footer>
+  </html>
